@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Women @ Work — Give to Gain. Every journey shared helps another woman rise. Connect with mentors, share your story, and grow together.">
+    <title>Women @ Work — Give to Gain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <div class="logo">Women @ Work</div>
+            <ul class="nav-menu">
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#mentors">Mentors</a></li>
+                <li><a href="#share">Share Story</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-badge">International Women's Day 2026</div>
+            <h1 class="hero-title">Women @ Work — Give to Gain</h1>
+            <p class="hero-message">Every journey shared helps another woman rise. Give to gain.</p>
+            <p class="hero-tagline">✨ Your growth begins with one conversation ✨</p>
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="scrollToSection('mentors')" aria-label="Scroll to mentors section">Find a Mentor</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('share')" aria-label="Scroll to share your story form">Share Your Story</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Explore Our Community</h2>
+            <p class="section-subtitle">Discover mentors across different domains and career paths</p>
+            <div id="categories-grid" class="categories-grid" role="list">
+                <!-- Categories will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentors Section -->
+    <section class="mentors" id="mentors">
+        <div class="container">
+            <h2 class="section-title">Connect & Learn</h2>
+            <p class="section-subtitle">Discover inspiring mentors ready to guide your journey</p>
+            <div id="mentors-grid" class="mentors-grid" role="list">
+                <!-- Mentor cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Your Story Section -->
+    <section class="share-story" id="share">
+        <div class="container">
+            <h2 class="section-title">Share Your Story</h2>
+            <p class="section-subtitle">Your journey can inspire and guide others. Tell us your story.</p>
+            
+            <form id="story-form" class="story-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name <span class="required" aria-label="required">*</span></label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Role <span class="required" aria-label="required">*</span></label>
+                    <input type="text" id="role" name="role" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category <span class="required" aria-label="required">*</span></label>
+                    <select id="category" name="category" required aria-required="true">
+                        <option value="">Select a category</option>
+                        <!-- Options will be dynamically inserted -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Upload Your Photo</label>
+                    <input type="file" id="image" name="image" accept="image/*" aria-describedby="image-help">
+                    <small id="image-help" class="form-help">Accepted formats: JPG, PNG. Max 5MB.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="journey">Your Journey <span class="required" aria-label="required">*</span></label>
+                    <textarea id="journey" name="journey" rows="6" required aria-required="true" placeholder="Share your experiences, challenges, and achievements..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Your Story</button>
+            </form>
+
+            <!-- Success Message -->
+            <div id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+        </div>
+    </section>
+
+    <!-- Monthly Spotlight Section -->
+    <section class="spotlight" id="spotlight">
+        <div class="container">
+            <h2 class="section-title">Monthly Spotlight</h2>
+            <div id="spotlight-content" class="spotlight-content">
+                <!-- Spotlight will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Library Section -->
+    <section class="resources" id="resources">
+        <div class="container">
+            <h2 class="section-title">Resource Library</h2>
+            <p class="section-subtitle">Tools and programs to support your professional growth</p>
+            <div id="resources-grid" class="resources-grid" role="list">
+                <!-- Resource cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Continuity Section -->
+    <section class="community" id="community">
+        <div class="container">
+            <h2 class="section-title">Community & Continuity</h2>
+            <p class="section-subtitle">Stay connected, grow together</p>
+            
+            <div class="community-grid">
+                <div class="community-card">
+                    <h3>Join the Teams Group</h3>
+                    <p>Connect with fellow women professionals in our dedicated Teams workspace. Share insights, ask questions, and build lasting relationships.</p>
+                    <a href="#join-teams" class="btn btn-outline">Join Now</a>
+                </div>
+
+                <div class="community-card">
+                    <h3>Ask a Question</h3>
+                    <p>Have a question or need advice? Our Q&A platform connects you with experienced professionals ready to help.</p>
+                    <a href="#qa" class="btn btn-outline">Browse Q&A</a>
+                </div>
+
+                <div class="community-card">
+                    <h3>Mentor–Mentee Program</h3>
+                    <p>Join our structured mentorship program with monthly touchpoints, goal-setting, and personalized guidance.</p>
+                    <a href="#program" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+
+            <div class="continuity-info">
+                <h3>How This Initiative Continues</h3>
+                <ul>
+                    <li><strong>Monthly Spotlight:</strong> Each month, we feature an inspiring woman's journey and contributions.</li>
+                    <li><strong>Quarterly Updates:</strong> Regular newsletters with resources, success stories, and upcoming events.</li>
+                    <li><strong>Ongoing Mentor Onboarding:</strong> New mentors join continuously to expand our community.</li>
+                    <li><strong>Annual Summit:</strong> Virtual gathering to celebrate achievements and strengthen connections.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p class="footer-message">Women @ Work — Give to Gain. Together, we rise.</p>
+            <p class="footer-copyright">&copy; 2026 Women @ Work Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

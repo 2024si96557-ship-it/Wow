@@ -20,9 +20,9 @@
     --womens-day-green: #10B981;
     --text-primary: #1F2937;
     --text-secondary: #6B7280;
-    --background: #FFFFFF;
-    --background-alt: #F9FAFB;
-    --border-color: #E5E7EB;
+    --background: #FFF8F0;
+    --background-alt: #FFF4E6;
+    --border-color: #F3E5D5;
     --success: #10B981;
     --focus-ring: #6B46C1;
     
@@ -63,7 +63,7 @@ body {
     font-family: var(--font-primary);
     line-height: var(--line-height-base);
     color: var(--text-primary);
-    background-color: var(--background);
+    background-color: #FFF8F0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

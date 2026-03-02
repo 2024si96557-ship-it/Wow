@@ -1066,29 +1066,38 @@ section {
    =========================== */
 
 body.reading-mode {
-    background-color: #F5F1E8;
-    color: #2C2416;
+    background-color: #1A1625;
+    color: #E5E7EB;
 }
 
 body.reading-mode .header {
-    background-color: #FAF8F3;
-    border-bottom-color: #D4CFC3;
+    background-color: #231D2E;
+    border-bottom-color: #3D3452;
+}
+
+body.reading-mode .logo,
+body.reading-mode .nav-menu a {
+    color: #D1D5DB;
+}
+
+body.reading-mode .nav-menu a:hover {
+    color: #A78BFA;
 }
 
 body.reading-mode .reading-mode-btn {
-    background-color: var(--primary-color);
+    background-color: #6B46C1;
     color: white;
-    border-color: var(--primary-color);
+    border-color: #8B5CF6;
 }
 
 body.reading-mode section {
-    background-color: #FAF8F3;
+    background-color: #1A1625;
 }
 
 body.reading-mode .categories,
 body.reading-mode .share-story,
 body.reading-mode .resources {
-    background-color: #F5F1E8;
+    background-color: #13111A;
 }
 
 body.reading-mode .category-card,
@@ -1098,23 +1107,68 @@ body.reading-mode .story-form,
 body.reading-mode .spotlight-content,
 body.reading-mode .community-card,
 body.reading-mode .continuity-info {
-    background-color: #FFFFFF;
-    border-color: #D4CFC3;
+    background-color: #231D2E;
+    border-color: #3D3452;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-body.reading-mode .text-primary,
 body.reading-mode h1,
 body.reading-mode h2,
 body.reading-mode h3,
 body.reading-mode h4,
 body.reading-mode h5,
-body.reading-mode h6 {
-    color: #2C2416;
+body.reading-mode h6,
+body.reading-mode .mentor-name,
+body.reading-mode .spotlight-name {
+    color: #F3F4F6;
+}
+
+body.reading-mode p,
+body.reading-mode .section-subtitle,
+body.reading-mode .mentor-role,
+body.reading-mode .mentor-expertise,
+body.reading-mode .spotlight-role {
+    color: #D1D5DB;
 }
 
 body.reading-mode .text-secondary,
-body.reading-mode .section-subtitle {
-    color: #5A5245;
+body.reading-mode .form-help {
+    color: #9CA3AF;
+}
+
+body.reading-mode .category-card h3,
+body.reading-mode .resource-card h3,
+body.reading-mode .community-card h3,
+body.reading-mode .continuity-info h3 {
+    color: #A78BFA;
+}
+
+body.reading-mode .spotlight-quote {
+    color: #C4B5FD;
+    border-left-color: #8B5CF6;
+}
+
+body.reading-mode .hero {
+    filter: brightness(0.8);
+}
+
+body.reading-mode input,
+body.reading-mode select,
+body.reading-mode textarea {
+    background-color: #2D2639;
+    border-color: #3D3452;
+    color: #E5E7EB;
+}
+
+body.reading-mode input:focus,
+body.reading-mode select:focus,
+body.reading-mode textarea:focus {
+    border-color: #8B5CF6;
+    background-color: #362F47;
+}
+
+body.reading-mode .footer {
+    background-color: #13111A;
 }
 
 /* ===========================

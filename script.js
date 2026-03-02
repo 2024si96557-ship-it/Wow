@@ -398,8 +398,8 @@ function initializeReadingMode() {
             localStorage.setItem('readingMode', isActive);
             
             // Update button text
-            this.textContent = isActive ? '📚' : '📖';
-            this.title = isActive ? 'Exit Reading Mode' : 'Enter Reading Mode';
+            this.textContent = isActive ? '☀️' : '📖';
+            this.title = isActive ? 'Turn Off Eye Comfort Mode' : 'Turn On Eye Comfort Mode';
         });
     }
 }

@@ -371,9 +371,38 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', handleFormSubmit);
     }
     
+    // Initialize reading mode
+    initializeReadingMode();
+    
     // Add accessibility improvements
     enhanceAccessibility();
 });
+
+// ===========================
+// Reading Mode
+// ===========================
+
+function initializeReadingMode() {
+    const toggleBtn = document.getElementById('reading-mode-toggle');
+    
+    // Load saved preference
+    if (localStorage.getItem('readingMode') === 'true') {
+        document.body.classList.add('reading-mode');
+    }
+    
+    // Toggle on click
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+            document.body.classList.toggle('reading-mode');
+            const isActive = document.body.classList.contains('reading-mode');
+            localStorage.setItem('readingMode', isActive);
+            
+            // Update button text
+            this.textContent = isActive ? '📚' : '📖';
+            this.title = isActive ? 'Exit Reading Mode' : 'Enter Reading Mode';
+        });
+    }
+}
 
 // ===========================
 // Accessibility Enhancements

@@ -171,6 +171,28 @@ section {
     color: var(--primary-color);
 }
 
+.reading-mode-btn {
+    background: none;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.5rem 0.75rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    line-height: 1;
+}
+
+.reading-mode-btn:hover {
+    background-color: var(--background-alt);
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.reading-mode-btn:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
 /* Mobile Navigation */
 @media (max-width: 640px) {
     .nav-menu {
@@ -296,6 +318,13 @@ section {
 .hero .container {
     position: relative;
     z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .hero-badge {
@@ -1030,6 +1059,62 @@ section {
 .footer-copyright {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.875rem;
+}
+
+/* ===========================
+   Reading Mode
+   =========================== */
+
+body.reading-mode {
+    background-color: #F5F1E8;
+    color: #2C2416;
+}
+
+body.reading-mode .header {
+    background-color: #FAF8F3;
+    border-bottom-color: #D4CFC3;
+}
+
+body.reading-mode .reading-mode-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+body.reading-mode section {
+    background-color: #FAF8F3;
+}
+
+body.reading-mode .categories,
+body.reading-mode .share-story,
+body.reading-mode .resources {
+    background-color: #F5F1E8;
+}
+
+body.reading-mode .category-card,
+body.reading-mode .mentor-card,
+body.reading-mode .resource-card,
+body.reading-mode .story-form,
+body.reading-mode .spotlight-content,
+body.reading-mode .community-card,
+body.reading-mode .continuity-info {
+    background-color: #FFFFFF;
+    border-color: #D4CFC3;
+}
+
+body.reading-mode .text-primary,
+body.reading-mode h1,
+body.reading-mode h2,
+body.reading-mode h3,
+body.reading-mode h4,
+body.reading-mode h5,
+body.reading-mode h6 {
+    color: #2C2416;
+}
+
+body.reading-mode .text-secondary,
+body.reading-mode .section-subtitle {
+    color: #5A5245;
 }
 
 /* ===========================

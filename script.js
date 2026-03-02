@@ -47,6 +47,7 @@ const mentors = [
         expertise: 'Sustainable design, urban planning, green building certification',
         category: 'Women in Architecture',
         initials: 'SM',
+        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
         email: '#',
         teams: '#'
     },
@@ -56,6 +57,7 @@ const mentors = [
         expertise: 'Agile methodologies, stakeholder management, portfolio optimization',
         category: 'Women in Project Management',
         initials: 'PS',
+        image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
         email: '#',
         teams: '#'
     },
@@ -65,6 +67,7 @@ const mentors = [
         expertise: 'Digital transformation, design thinking, product development',
         category: 'Women in Innovation',
         initials: 'ER',
+        image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop',
         email: '#',
         teams: '#'
     },
@@ -74,6 +77,7 @@ const mentors = [
         expertise: 'Commercial design, team leadership, client relations',
         category: 'Women in Architecture',
         initials: 'JC',
+        image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=400&fit=crop',
         email: '#',
         teams: '#'
     },
@@ -83,6 +87,7 @@ const mentors = [
         expertise: 'Risk management, cross-functional teams, change management',
         category: 'Women in Project Management',
         initials: 'AW',
+        image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop',
         email: '#',
         teams: '#'
     },
@@ -92,6 +97,7 @@ const mentors = [
         expertise: 'AI & machine learning, startup mentoring, venture building',
         category: 'Women in Innovation',
         initials: 'MP',
+        image: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&h=400&fit=crop',
         email: '#',
         teams: '#'
     },
@@ -101,6 +107,7 @@ const mentors = [
         expertise: 'Work-life balance, career transitions, mindfulness practices',
         category: 'Women Beyond Work',
         initials: 'RT',
+        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
         email: '#',
         teams: '#'
     },
@@ -110,6 +117,7 @@ const mentors = [
         expertise: 'Emerging leader, technology projects, agile practices',
         category: 'Women Rising',
         initials: 'ZA',
+        image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop',
         email: '#',
         teams: '#'
     },
@@ -119,6 +127,7 @@ const mentors = [
         expertise: 'Mental health, professional development, community building',
         category: 'Women Beyond Work',
         initials: 'SM',
+        image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop',
         email: '#',
         teams: '#'
     }
@@ -149,6 +158,7 @@ const spotlight = {
     name: 'Dr. Aisha Johnson',
     role: 'VP of Engineering & Innovation',
     initials: 'AJ',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop',
     quote: 'Every challenge is an opportunity to learn, grow, and lift others as you climb.',
     story: 'Dr. Aisha Johnson started her career as a junior engineer in a male-dominated field, facing skepticism and barriers at every turn. Rather than letting obstacles define her, she used them as fuel for her determination. Over 15 years, she climbed from entry-level roles to VP of Engineering, leading a team of 200+ professionals. Along the way, she championed diversity initiatives, mentored over 50 women, and pioneered innovative processes that transformed her organization. Today, she\'s a sought-after speaker and advocate for women in STEM, proving that resilience, vision, and giving back create lasting impact.'
 };
@@ -184,9 +194,14 @@ function renderMentors() {
         card.className = 'mentor-card';
         card.setAttribute('role', 'listitem');
         
+        const imageContent = mentor.image 
+            ? `<img src="${mentor.image}" alt="${mentor.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+               <div class="initials" style="display:none;">${mentor.initials}</div>`
+            : `<div class="initials">${mentor.initials}</div>`;
+        
         card.innerHTML = `
-            <div class="mentor-image" role="img" aria-label="Profile photo placeholder for ${mentor.name}">
-                ${mentor.initials}
+            <div class="mentor-image" role="img" aria-label="Profile photo for ${mentor.name}">
+                ${imageContent}
             </div>
             <div class="mentor-content">
                 <h3 class="mentor-name">${mentor.name}</h3>
@@ -226,9 +241,14 @@ function renderResources() {
 function renderSpotlight() {
     const container = document.getElementById('spotlight-content');
     
+    const imageContent = spotlight.image 
+        ? `<img src="${spotlight.image}" alt="${spotlight.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+           <div class="initials" style="display:none;">${spotlight.initials}</div>`
+        : `<div class="initials">${spotlight.initials}</div>`;
+    
     container.innerHTML = `
-        <div class="spotlight-image" role="img" aria-label="Profile photo placeholder for ${spotlight.name}">
-            ${spotlight.initials}
+        <div class="spotlight-image" role="img" aria-label="Profile photo for ${spotlight.name}">
+            ${imageContent}
         </div>
         <div class="spotlight-details">
             <h3 class="spotlight-name">${spotlight.name}</h3>
